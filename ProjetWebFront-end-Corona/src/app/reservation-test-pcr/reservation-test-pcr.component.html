@@ -1,0 +1,22 @@
+<h2 class="text-center">Mes Rendez-vous</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Nom Laboratoire</th>
+        <th>Date</th>
+        <th>Heure</th>
+    </tr>
+</thead>
+    <tbody>
+        <tr *ngFor = "let rdv of rendezVous">
+            <td>{{rdv.user.nom}}</td>
+            <td>{{rdv.user.prenom}}</td>
+            <td>{{rdv.laboratoire.nom}}</td>
+            <td>{{rdv.dateRes}}</td>
+            <td>{{rdv.heure}}</td>
+        </tr>
+    </tbody>
+
+</table>

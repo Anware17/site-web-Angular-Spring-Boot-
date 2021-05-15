@@ -1,0 +1,27 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Modifier les informations d'un Laboratoire </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label>Nom</label>
+            <input type="text" class ="form-control" id = "nom"
+                [(ngModel)] = "laboratoire.nom" name = "nom">
+        </div>
+    
+        <div class="form-group">
+            <label>Adresse</label>
+            <input type="text" class ="form-control" id = "adresse"
+                [(ngModel)] = "laboratoire.adresse" name = "adresse">
+        </div>
+        <div class="form-group">
+            <label>Numéro de Téléphone</label>
+            <input type="text" class ="form-control" id = "numTel"
+                [(ngModel)] = "laboratoire.numTel" name = "numTel">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Modifer</button>
+        <div *ngIf="isOk">
+            <h4>Vous avez mettre le laboratoire à jour avec succès!</h4>
+    
+    </div> </form>
+</div>

@@ -1,0 +1,14 @@
+<h2>Bienvenu De Nouveau ! </h2>
+<h4>Si vous avez besoin de gérer la liste des laboratoires cliquez ci-dessous</h4>
+<br>
+<div class="col-md-6 offset-md-3">
+<!--<button type="button" class="btn btn-primary" (click) = "gotoCreateLab()" style="position: center; right: 0;">Ajouter un Laboratoire</button>-->
+<a [routerLink]="['/laboratoire']" routerLinkActivate="activate">Ajouter un Laboratoire</a>
+</div>
+<br>
+<h4>Si vous avez besoin de consulter la liste des laboratoires cliquez ci-dessous</h4>
+<br>
+<div class="col-md-6 offset-md-3">
+<a [routerLink]="['/laboratoires']" >Liste des Laboratoires</a>
+
+</div>

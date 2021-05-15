@@ -1,0 +1,75 @@
+
+<div class="container-fluid mb-5">
+  <h2>Formulaire de réservation du test PCR</h2>
+  <form (ngSubmit)="onSubmitForm()" >
+  <!-- <div class="form-group">
+     <label>Nom du patient</label>
+     <input type="text" id="nomUser" 
+     class="form-control" formControlName="nomUser" [(ngModule)]="reservationPCR.idUser" >
+   </div>
+   <div class="form-group">
+      <label>Prénom du patient</label>
+      <input type="text" id="prenomUser" 
+      class="form-control" formControlName="nomUser" [(ngModule)]="reservationPCR.idUser" >
+    </div>
+
+    <div class="form-group">
+      <label>Veuillez choisir le Nom du laboratoire</label>
+      <br>
+      <select>
+        <option *ngFor="let liLab of laboratoire " [value]="liLab.idLab">{{liLab.nom}}</option>
+    </select>
+  </div>
+
+    <div class="form-group">
+      <label>Date du rendez-vous</label>
+      <input type="date" id="dateRes" 
+      class="form-control" formControlName="dateRes" >
+    </div>
+    
+    
+  <div class="form-group">
+      <label>Choisir une heure</label>
+      <input type="text" id="heure" 
+      class="form-control" formControlName="heure" >
+  </div>-->
+  <div class="form-group">
+    <label>Nom du patient</label>
+    <!--<input type="text" id="nomUser" 
+    class="form-control" formControlName="nomUser" [(ngModule)]="reservationPCR.idUser" >-->
+    <input type="text" id="nomUser" 
+    class="form-control" formControlName="nomUser" [(ngModel)] = " reservation.nomPatient">
+  </div>
+  <div class="form-group">
+     <label>Prénom du patient</label>
+     <!--<input type="text" id="prenomUser" 
+     class="form-control" formControlName="prenomUser" [(ngModule)]="reservationPCR.idUser" >-->
+     <input type="text" id="prenomUser" 
+     class="form-control" formControlName="prenomUser" >
+   </div>
+
+  <div class="form-group">
+    <label>Veuillez choisir le Nom du laboratoire</label>
+    <br>
+    <select class="custom-select" >
+      <option *ngFor="let liLab of laboratoire , let iL = index " [value]="liLab.iL">{{liLab.nom}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Date du rendez-vous</label>
+    <input type="date" id="dateRes" 
+    class="form-control" formControlName="dateRes" >
+  </div>
+  
+  
+<div class="form-group">
+    <label>Choisir une heure</label>
+    <input type="text" id="heure" 
+    class="form-control" formControlName="heure" >
+</div>
+
+
+
+  <button type="submit" class="btn btn-success" (onclick)="saveReservation()">Soumettre</button>
+  </form>
+  </div>

@@ -1,0 +1,25 @@
+<h2>LISTE DES LABORATOIRES </h2>
+<h6>Liste des laboratoires privés d’analyses médicales qui ont obtenu une licence pour prendre 
+    part au diagnostic du Coronavirus à travers les tests RT-PCR.</h6>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Nom du Laboratoire</th>
+            <th>Adresse</th>
+            <th>Numéro De Téléphone</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let labo of laboratoires" >
+            <td> {{ labo.nom }} </td>
+            <td> {{ labo.adresse }} </td>
+            <td> {{ labo.numTel }} </td>
+           <td>
+                <button (click) = "updateLaboratoire(labo.idLab)" class = "btn btn-info"> Modifier</button>
+              <button (click) = "deleteLaboratoire(labo.idLab)" class = "btn btn-danger" style="margin-left: 10px"> Supprimer</button>
+                <button (click) = "laboDetails(labo.idLab)" class = "btn btn-info" style="margin-left: 10px"> Voir</button>
+           </td>
+        </tr>
+    </tbody>
+</table>
